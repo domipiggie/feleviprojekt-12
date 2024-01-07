@@ -9,40 +9,49 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
           <link href="css/styles.css" rel="stylesheet" />
-          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBud7RdBG3pZk2A9i+eWdJfOwYmWxXP1rXnFwUJp+Vm0W/H+Vk+iQaS0b/oKi1nDqAqsCQb+GyNnvfYUZzNXsGFvXkfkVN" crossorigin="anonymous"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <title>Üdvözöljük Weboldalunkon!</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-
+        
                 <div class="input-group">
-                        <div class="form-outline" data-mdb-input-init>
-                        <input id="search-input" type="search" id="form1" class="form-control" placeholder="search"/>
-                        
-                        </div>
-                        <button id="search-button" type="button" class="btn btn-primary" >
-                        <i class="fas fa-search"></i>
-                        </button>
+                    <div class="form-outline" data-mdb-input-init>
+                        <input id="search-input" type="search" id="form1" class="form-control w-75" placeholder="Keresés..."/>
+                        <!-- w-75 osztállyal tudod beállítani a szélességet -->
                     </div>
-
+                    <button id="search-button" type="button" class="btn btn-dark" >
+                        <!-- btn-dark osztállyal tudod beállítani a fekete színű gombot -->
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+        
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#leaderboard">Leaderboard</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#itemshop">Itemshop</a>
-                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 fw-bold" href="#home">
+                                <!-- fs-5 osztállyal növeled a betűméretet, fw-bold pedig vastagabbá teszi a szöveget -->
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 fw-bold" href="#leaderboard">
+                                Leaderboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 fw-bold" href="#itemshop">
+                                Itemshop
+                            </a>
+                        </li>
                     </ul>
-                  </div>
+                </div>
+            </div>
         </nav>
+        
         <header class="py-5 bg-image-full" style="background-image: url('https://oyster.ignimgs.com/mediawiki/apis.ign.com/fortnite/7/7d/Fortnite_Season_OG_Banner.JPG')">
             <div class="text-center my-5">
                 
@@ -98,7 +107,7 @@
         
        
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Fortnite Tracker 2 </p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; domipiggie,pessi,viktor</p></div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="javascript/search.js"></script>
