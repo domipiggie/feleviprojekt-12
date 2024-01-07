@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Képes táblázat példa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+        }
+        .table td, .table th {
+            border: none;
+            vertical-align: middle;
+        }
+        .product-img {
+            max-width: 50px;
+            max-height: 50px;
+            display: block;
+            margin: auto;
+        }
+        .table-bordered {
+            border: none;
+        }
+        .table-bordered th {
+            background-color: #343a40;
+            color: white;
+            border: none;
+        }
+        .table-bordered td {
+            background-color: #454d55;
+            color: white;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="container mt-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Tárgy</th>
+                    <th>Ár</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://via.placeholder.com/50" alt="Tárgy képe" class="product-img">
+                        <p class="mb-0">Tárgy neve</p>
+                    </td>
+                    <td>
+                        <img src="https://via.placeholder.com/30" alt="Ár ikon" class="product-img">
+                        1000 Ft
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://via.placeholder.com/50" alt="Tárgy képe" class="product-img">
+                        <p class="mb-0">Másik tárgy</p>
+                    </td>
+                    <td>
+                        <img src="https://via.placeholder.com/30" alt="Ár ikon" class="product-img">
+                        1500 Ft
+                    </td>
+                </tr>
+                <!-- Ide másold be a további sorokat -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
