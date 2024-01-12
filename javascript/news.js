@@ -41,7 +41,7 @@ window.addEventListener("load", function(){
 
         const respJson = JSON.parse(xhr.response)
 
-        for (i = 0; i < respJson.news.length; i++){
+        for (i = 0; i < 8; i++){
             if (i%2==0){
                 createNewCardDeck()
                 createNewsDiv(respJson.news[i].title, respJson.news[i].body, respJson.news[i].image)
