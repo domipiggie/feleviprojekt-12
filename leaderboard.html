@@ -7,144 +7,232 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <style>
-        body {
-            background-color: #333;
-        
-        }
-        .table {
-            background-color: #444;
-       
-        }
-        .table th, .table td {
-            border-color: #555;
-        }
-        .table th {
-            background-color: #222;
-        }
+     
     </style>
 </head>
 <body>
-
-    <div class="container mt-5">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Helyezés</th>
-                    <th>Név</th>
-                    <th>Pontok</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- 20 nevet és pontszámot adok hozzá a táblázathoz -->
-                <tr>
-                    <td>1.</td>
-                    <td>John Doe</td>
-                    <td>1000</td>
-                </tr>
-                <tr>
-                    <td>2.</td>
-                    <td>Jane Smith</td>
-                    <td>950</td>
-                </tr>
-                <tr>
-                    <td>3.</td>
-                    <td>Adam Johnson</td>
-                    <td>900</td>
-                </tr>
-                <tr>
-                    <td>4.</td>
-                    <td>Sarah Brown</td>
-                    <td>850</td>
-                </tr>
-                <tr>
-                    <td>5.</td>
-                    <td>Michael Williams</td>
-                    <td>800</td>
-                </tr>
-                <tr>
-                    <td>6.</td>
-                    <td>Emily Wilson</td>
-                    <td>750</td>
-                </tr>
-                <!-- Folytasd a további nevekkel és pontszámokkal -->
-                <tr>
-                    <td>7.</td>
-                    <td>Olivia Johnson</td>
-                    <td>700</td>
-                </tr>
-                <tr>
-                    <td>8.</td>
-                    <td>James Anderson</td>
-                    <td>650</td>
-                </tr>
-                <tr>
-                    <td>9.</td>
-                    <td>Charlotte Garcia</td>
-                    <td>600</td>
-                </tr>
-                <tr>
-                    <td>10.</td>
-                    <td>Alexander Martinez</td>
-                    <td>550</td>
-                </tr>
-                <tr>
-                    <td>11.</td>
-                    <td>Sophia Clark</td>
-                    <td>500</td>
-                </tr>
-                <tr>
-                    <td>12.</td>
-                    <td>William Taylor</td>
-                    <td>450</td>
-                </tr>
-                <tr>
-                    <td>13.</td>
-                    <td>Isabella Hernandez</td>
-                    <td>400</td>
-                </tr>
-                <tr>
-                    <td>14.</td>
-                    <td>Ethan Lopez</td>
-                    <td>350</td>
-                </tr>
-                <tr>
-                    <td>15.</td>
-                    <td>Mia Martinez</td>
-                    <td>300</td>
-                </tr>
-                <tr>
-                    <td>16.</td>
-                    <td>Abigail Adams</td>
-                    <td>250</td>
-                </tr>
-                <tr>
-                    <td>17.</td>
-                    <td>Aiden Brown</td>
-                    <td>200</td>
-                </tr>
-                <tr>
-                    <td>18.</td>
-                    <td>Harper Evans</td>
-                    <td>150</td>
-                </tr>
-                <tr>
-                    <td>19.</td>
-                    <td>Amelia Hill</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>20.</td>
-                    <td>Sebastian Wright</td>
-                    <td>50</td>
-                </tr>
-                <!-- Itt fejeztem be a 20 nevet és pontszámot -->
-            </tbody>
-        </table>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade active show" id="home" role="tabpanel">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Helyezés</th>
+                            <th scope="col">Játékos</th>
+                            <th scope="col">Adatok</th>
+                            <th scope="col">Pontszám</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="inner-box">
+                            <th scope="row">
+                                <div class="event-date">
+                                    <p>helyezet</p>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="event-img">
+                                    <img src="kepek/fej3.webp" alt="" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="event-wrap">
+                                    <h3><a>Név</a></h3>
+                                        <div class="categories">
+                                            <a>nemzetiség</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="r-no">
+                                    <span>Pontszám</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="inner-box">
+                            <th scope="row">
+                                <div class="event-date">
+                                    <p>helyezet</p>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="event-img">
+                                    <img src="kepek/fej3.webp" alt="" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="event-wrap">
+                                    <h3><a>Név</a></h3>
+                                        <div class="categories">
+                                            <a>nemzetiség</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="r-no">
+                                    <span>Pontszám</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="inner-box">
+                            <th scope="row">
+                                <div class="event-date">
+                                    <p>helyezet</p>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="event-img">
+                                    <img src="kepek/fej3.webp" alt="" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="event-wrap">
+                                    <h3><a>Név</a></h3>
+                                        <div class="categories">
+                                            <a>nemzetiség</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="r-no">
+                                    <span>Pontszám</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="inner-box">
+                            <th scope="row">
+                                <div class="event-date">
+                                    <p>helyezet</p>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="event-img">
+                                    <img src="kepek/fej3.webp" alt="" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="event-wrap">
+                                    <h3><a>Név</a></h3>
+                                        <div class="categories">
+                                            <a>nemzetiség</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="r-no">
+                                    <span>Pontszám</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="inner-box">
+                            <th scope="row">
+                                <div class="event-date">
+                                    <p>helyezet</p>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="event-img">
+                                    <img src="kepek/fej3.webp" alt="" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="event-wrap">
+                                    <h3><a>Név</a></h3>
+                                        <div class="categories">
+                                            <a>nemzetiség</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="r-no">
+                                    <span>Pontszám</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="inner-box">
+                            <th scope="row">
+                                <div class="event-date">
+                                    <p>helyezet</p>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="event-img">
+                                    <img src="kepek/fej3.webp" alt="" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="event-wrap">
+                                    <h3><a>Név</a></h3>
+                                        <div class="categories">
+                                            <a>nemzetiség</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="r-no">
+                                    <span>Pontszám</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="inner-box">
+                            <th scope="row">
+                                <div class="event-date">
+                                    <p>helyezet</p>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="event-img">
+                                    <img src="kepek/fej3.webp" alt="" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="event-wrap">
+                                    <h3><a>Név</a></h3>
+                                        <div class="categories">
+                                            <a>nemzetiség</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="r-no">
+                                    <span>Pontszám</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="inner-box">
+                            <th scope="row">
+                                <div class="event-date">
+                                    <p>helyezet</p>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="event-img">
+                                    <img src="kepek/fej3.webp" alt="" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="event-wrap">
+                                    <h3><a>Név</a></h3>
+                                        <div class="categories">
+                                            <a>nemzetiség</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="r-no">
+                                    <span>Pontszám</span>
+                                </div>
+                            </td>
+                        </tr>
 </body>
 </html>
