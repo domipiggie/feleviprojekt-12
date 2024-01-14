@@ -1,115 +1,110 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Képes táblázat példa</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <style>
         body {
-            background-color: #333;
-            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #252525;
         }
-        .table td, .table th {
-            border: none;
-            vertical-align: middle;
+
+        .item-container {
+           
+            background-color: #c4c4c4;
+            -webkit-box-shadow: 0px 5px 15px 8px #e4e7fb;
+            box-shadow: 0px 5px 15px 8px #e4e7fb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 0.5rem;
+            padding: 20px;
+            overflow: hidden;
+            width: 1500px;
         }
-        .product-img {
-            max-width: 50px;
-            max-height: 50px;
-            display: block;
-            margin: auto;
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem; 
         }
-        .table-bordered {
-            border: none;
-        }
-        .table-bordered th {
-            background-color: #343a40;
-            color: white;
-            border: none;
-        }
-        .table-bordered td {
-            background-color: #454d55;
-            color: white;
-            border: none;
+
+        .item {
+            margin-bottom: 20px;
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-    
-            <div class="input-group">
-                <div class="form-outline" data-mdb-input-init>
-                    <input id="search-input" type="search" id="form1" class="form-control w-75" placeholder="Keresés..."/>
-                    <!-- w-vel tudsz szelesiteni -->
-                </div>
-                <button id="search-button" type="button" class="btn btn-dark" >
-                    <i class="fas fa-search"></i>
-                </button>
+
+    <div class="item-container">
+        <h1 class="mt-4 mb-4">Itemshop</h1>
+
+        <div class="row">
+            <div class="col-md-6 item">
+                <img src="kepek/Base3.webp" alt="Item 1">
+                <h3>Item 1</h3>
+                <p>Description of Item 1. Price: $10</p>
+                <button class="btn btn-primary">Buy</button>
             </div>
-    
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link fs-5 fw-bold" href="index.html">
-                            Home
-                        </a>
-                    </li>  
-                    <li class="nav-item">
-                        <a class="nav-link fs-5 fw-bold" href="leaderboard.html">
-                            Leaderboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-5 fw-bold" href="#itemshop">
-                            Itemshop
-                        </a>
-                    </li>
-                </ul>
+
+            <div class="col-md-6 item">
+                <img src="kepek/Commando3.webp" alt="Item 2">
+                <h3>Item 2</h3>
+                <p>Description of Item 2. Price: $15</p>
+                <button class="btn btn-primary">Buy</button>
+            </div>
+
+            <div class="col-md-6 item">
+                <img src="kepek/Demolisher1.webp" alt="Item 3">
+                <h3>Item 3</h3>
+                <p>Description of Item 3. Price: $20</p>
+                <button class="btn btn-primary">Buy</button>
+            </div>
+
+            <div class="col-md-6 item">
+                <img src="kepek/Fleetfoot4.webp" alt="Item 4">
+                <h3>Item 4</h3>
+                <p>Description of Item 4. Price: $25</p>
+                <button class="btn btn-primary">Buy</button>
+            </div>
+
+            <div class="col-md-6 item">
+                <img src="kepek/Rook1.webp" alt="Item 5">
+                <h3>Item 5</h3>
+                <p>Description of Item 5. Price: $30</p>
+                <button class="btn btn-primary">Buy</button>
+            </div>
+
+            <div class="col-md-6 item">
+                <img src="kepek/Raider6.webp" alt="Item 6">
+                <h3>Item 6</h3>
+                <p>Description of Item 6. Price: $35</p>
+                <button class="btn btn-primary">Buy</button>
             </div>
         </div>
-    </nav>
-
-    <div class="container mt-5">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Tárgy</th>
-                    <th>Ár</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <img src="https://via.placeholder.com/50" alt="Tárgy képe" class="product-img">
-                        <p class="mb-0">Tárgy neve</p>
-                    </td>
-                    <td>
-                        <img src="https://via.placeholder.com/30" alt="Ár ikon" class="product-img">
-                        1000 Ft
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="https://via.placeholder.com/50" alt="Tárgy képe" class="product-img">
-                        <p class="mb-0">Másik tárgy</p>
-                    </td>
-                    <td>
-                        <img src="https://via.placeholder.com/30" alt="Ár ikon" class="product-img">
-                        1500 Ft
-                    </td>
-                </tr>
-                <!-- Ide másold be a további sorokat -->
-            </tbody>
-        </table>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
