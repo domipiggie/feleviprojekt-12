@@ -1,82 +1,98 @@
 <!DOCTYPE html>
 <html lang="hu">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-        <link rel="icon" href="kepek/TRN.png">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-          <link href="css/styles.css" rel="stylesheet" />
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <title>Fortnite Tracker</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-        
-                <div class="input-group">
-                    <div class="form-outline" data-mdb-input-init>
-                        <input id="search-input" type="search" id="form1" class="form-control w-75" placeholder="Keresés..."/>
-                        <!-- w-vel tudsz szelesiteni -->
-                    </div>
-                    <button id="search-button" type="button" class="btn btn-dark" >
-                        <i class="fas fa-search"></i>
-                    </button>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="icon" href="kepek/TRN.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <title>Fortnite Tracker</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <div class="input-group">
+                <div class="form-outline" data-mdb-input-init>
+                    <input id="search-input" type="search" id="form1" class="form-control w-75"
+                        placeholder="Keresés..." />
+                    <!-- w-vel tudsz szelesiteni -->
                 </div>
-        
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link fs-5 fw-bold" href="#home">
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fs-5 fw-bold" href="leaderboard.html">
-                                Leaderboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fs-5 fw-bold" href="itemshop.html">
-                                Itemshop
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <button id="search-button" type="button" class="btn btn-dark">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
-        </nav>
-        
-        <header class="py-5 bg-image-full" style="background-image: url('https://oyster.ignimgs.com/mediawiki/apis.ign.com/fortnite/7/7d/Fortnite_Season_OG_Banner.JPG')">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-bold" href="#home">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-bold" href="leaderboard.html">
+                            Leaderboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-bold" href="itemshop.html">
+                            Itemshop
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-5 bg-image-full"
+        style="background-image: url('https://oyster.ignimgs.com/mediawiki/apis.ign.com/fortnite/7/7d/Fortnite_Season_OG_Banner.JPG')">
+        <div class="container">
             <div class="text-center my-5">
-                
+
                 <h1 class="text-white fs-3 fw-bolder">Find your Fortnite stats here</h1>
-                
+
                 <div class="row mt-5">
                     <div class="col-md-5 mx-auto">
                         <div class="input-group">
-                            <input class="form-control border" type="search" placeholder="Itt keress playerekre" id="example-search-input">
+                            <input class="form-control border" type="search" placeholder="Itt keress playerekre"
+                                id="example-search-input">
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-        </header>
-        <section class="py-5">
-            <div class="container" id="news">
-                <b><h1 class="mb-5">Recent News</h1></b>
-            </div>
-        </section>
-        
-       
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; domipiggie,pessi,viktor</p></div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="javascript/search.js"></script>
-        <script src="javascript/news.js"></script>
-    </body>
+        </div>
+    </header>
+    <section class="py-5">
+        <div class="container" id="news">
+            <b>
+                <h1 class="mb-5">Recent News</h1>
+            </b>
+        </div>
+    </section>
+
+
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; domipiggie,pessi,viktor</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript/search.js"></script>
+    <script src="javascript/news.js"></script>
+</body>
+
 </html>
