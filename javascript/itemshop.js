@@ -1,6 +1,6 @@
 const apiLink = "https://fortniteapi.io/v2/shop?lang=en"
 const xhr = new XMLHttpRequest()
-const itemsDiv = document.getElementById("items")
+const itemsDiv = document.getElementById("container")
 
 function makeItem(item){
     let backgrounds = []
@@ -10,9 +10,21 @@ function makeItem(item){
     return new Item(item.displayName, item.displayDescription, backgrounds, item.section.name)
 }
 
-function drawItem(item){
+function drawSection(item){
+    let currentSection = document.createElement("div")
+    currentSection.classList = "row"
+    let sectionName = document.createElement("h2")
+    sectionName.innerText = item.sectionName
+
+    currentSection.appendChild(sectionName)
+    itemsDiv.appendChild(currentSection)
+
+    return currentSection
+}
+
+function drawItem(item, parent){
     let mainDiv = document.createElement("div")
-    mainDiv.classList = "col-md-6 item"
+    mainDiv.classList = "col-lg-2 col-md-3 col-sm-6 item"
 
     let image = document.createElement("img")
     image.src = item.fullBackgrounds[0]
@@ -26,7 +38,7 @@ function drawItem(item){
     mainDiv.appendChild(image)
     mainDiv.appendChild(name)
     mainDiv.appendChild(desc)
-    itemsDiv.appendChild(mainDiv)
+    parent.appendChild(mainDiv)
 }
 
 window.addEventListener("load", function(){
@@ -55,8 +67,10 @@ window.addEventListener("load", function(){
         console.log(sections)
     
         sections.forEach(function(i){
+            let currentSection = drawSection(i)
+
             i.items.forEach(function(item){
-                drawItem(item)
+                drawItem(item, currentSection)
             })
         })
     }
