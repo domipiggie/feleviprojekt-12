@@ -9,233 +9,217 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <style>
+        * {
+  font-size: 62, 5%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #252525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 40rem;
+  height: 43rem;
+  background-color: #c4c4c4;
+  -webkit-box-shadow: 0px 5px 15px 8px #e4e7fb;
+  box-shadow: 0px 5px 15px 8px #e4e7fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 2rem;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.7rem;
+  color: #0a0707;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+#leaderboard {
+  width: 100%;
+  position:relative;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: #0c090a;
+  cursor: default;
+}
+
+tr {
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.2rem;
+}
+
+tr:not(:first-child):hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 5px 15px 8px #e4e7fb;
+  box-shadow: 0px 5px 15px 8px #5d5f69;
+}
+
+tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(1) {
+  color: #000000;
+}
+
+td {
+  height: 5rem;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.number {
+  width: 1rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.name {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+
+
+.points {
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.points:first-child {
+  width: 10rem;
+}
+
+.gold-medal {
+  height: 3rem;
+  margin-left: 1.5rem;
+}
+
+.ribbon {
+  width: 42rem;
+  height: 5.5rem;
+  top: -0.5rem;
+  background-color: #f5cb0d;
+  position: absolute;
+  left: -1rem;
+  -webkit-box-shadow: 0px 15px 11px -6px #000000;
+  box-shadow: 0px 15px 11px -6px #000000;
+}
+
+.ribbon::before {
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  bottom: -0.8rem;
+  left: 0.35rem;
+  transform: rotate(45deg);
+  background-color: #e6d00d;
+  position: absolute;
+  z-index: -1;
+}
+
+.ribbon::after {
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  bottom: -0.8rem;
+  right: 0.35rem;
+  transform: rotate(45deg);
+  background-color: #cde01c;
+  position: absolute;
+  z-index: -1;
+}
+
+
+@media (max-width: 740px) {
+    * {
+      font-size: 70%;
+    }
+}
+
+@media (max-width: 500px) {
+    * {
+      font-size: 55%;
+    }
+}
+
+@media (max-width: 390px) {
+    * {
+      font-size: 45%;
+    }
+}
      
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade active show" id="home" role="tabpanel">
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade active show" id="home" role="tabpanel">
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Helyezés</th>
-                            <th scope="col">Játékos</th>
-                            <th scope="col">Adatok</th>
-                            <th scope="col">Pontszám</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="inner-box">
-                            <th scope="row">
-                                <div class="event-date">
-                                    <p>helyezet</p>
-                                </div>
-                            </th>
-                            <td>
-                                <div class="event-img">
-                                    <img src="kepek/fej3.webp" alt="" />
-                                </div>
-                            </td>
-                            <td>
-                                <div class="event-wrap">
-                                    <h3><a>Név</a></h3>
-                                        <div class="categories">
-                                            <a>nemzetiség</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="r-no">
-                                    <span>Pontszám</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="inner-box">
-                            <th scope="row">
-                                <div class="event-date">
-                                    <p>helyezet</p>
-                                </div>
-                            </th>
-                            <td>
-                                <div class="event-img">
-                                    <img src="kepek/Commando3.webp" alt="" />
-                                </div>
-                            </td>
-                            <td>
-                                <div class="event-wrap">
-                                    <h3><a>Név</a></h3>
-                                        <div class="categories">
-                                            <a>nemzetiség</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="r-no">
-                                    <span>Pontszám</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="inner-box">
-                            <th scope="row">
-                                <div class="event-date">
-                                    <p>helyezet</p>
-                                </div>
-                            </th>
-                            <td>
-                                <div class="event-img">
-                                    <img src="kepek/Demolisher1.webp" alt="" />
-                                </div>
-                            </td>
-                            <td>
-                                <div class="event-wrap">
-                                    <h3><a>Név</a></h3>
-                                        <div class="categories">
-                                            <a>nemzetiség</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="r-no">
-                                    <span>Pontszám</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="inner-box">
-                            <th scope="row">
-                                <div class="event-date">
-                                    <p>helyezet</p>
-                                </div>
-                            </th>
-                            <td>
-                                <div class="event-img">
-                                    <img src="kepek/Raider6.webp" alt="" />
-                                </div>
-                            </td>
-                            <td>
-                                <div class="event-wrap">
-                                    <h3><a>Név</a></h3>
-                                        <div class="categories">
-                                            <a>nemzetiség</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="r-no">
-                                    <span>Pontszám</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="inner-box">
-                            <th scope="row">
-                                <div class="event-date">
-                                    <p>helyezet</p>
-                                </div>
-                            </th>
-                            <td>
-                                <div class="event-img">
-                                    <img src="kepek/Vintage3.webp" alt="" />
-                                </div>
-                            </td>
-                            <td>
-                                <div class="event-wrap">
-                                    <h3><a>Név</a></h3>
-                                        <div class="categories">
-                                            <a>nemzetiség</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="r-no">
-                                    <span>Pontszám</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="inner-box">
-                            <th scope="row">
-                                <div class="event-date">
-                                    <p>helyezet</p>
-                                </div>
-                            </th>
-                            <td>
-                                <div class="event-img">
-                                    <img src="kepek/Fleetfoot4.webp" alt="" />
-                                </div>
-                            </td>
-                            <td>
-                                <div class="event-wrap">
-                                    <h3><a>Név</a></h3>
-                                        <div class="categories">
-                                            <a>nemzetiség</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="r-no">
-                                    <span>Pontszám</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="inner-box">
-                            <th scope="row">
-                                <div class="event-date">
-                                    <p>helyezet</p>
-                                </div>
-                            </th>
-                            <td>
-                                <div class="event-img">
-                                    <img src="kepek/Rook1.webp" alt="" />
-                                </div>
-                            </td>
-                            <td>
-                                <div class="event-wrap">
-                                    <h3><a>Név</a></h3>
-                                        <div class="categories">
-                                            <a>nemzetiség</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="r-no">
-                                    <span>Pontszám</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="inner-box">
-                            <th scope="row">
-                                <div class="event-date">
-                                    <p>helyezet</p>
-                                </div>
-                            </th>
-                            <td>
-                                <div class="event-img">
-                                    <img src="kepek/Base3.webp" alt="" />
-                                </div>
-                            </td>
-                            <td>
-                                <div class="event-wrap">
-                                    <h3><a>Név</a></h3>
-                                        <div class="categories">
-                                            <a>nemzetiség</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="r-no">
-                                    <span>Pontszám</span>
-                                </div>
-                            </td>
-                        </tr>
-</body>
+    
+    <main>
+      <div id="header">
+        <h1>Leaderboard</h1>
+      </div>
+      <div id="leaderboard">
+        <div class="ribbon"></div>
+        <table>
+          <tr>
+            <td class="number">1</td>
+            <td class="name">winner name</td>
+            <td class="points">
+              matches/wins
+                <img class="gold-medal" src="https://i.ebayimg.com/images/g/LjUAAOSwN65g-p6M/s-l1200.webp" alt="gold medal"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="number">2</td>
+            <td class="name">name</td>
+            <td class="points"> matches/wins</td>
+          </tr>
+          <tr>
+            <td class="number">3</td>
+            <td class="name">name</td>
+            <td class="points"> matches/wins</td>
+          </tr>
+          <tr>
+            <td class="number">4</td>
+            <td class="name">name</td>
+            <td class="points"> matches/wins</td>
+          </tr>
+          <tr>
+            <td class="number">5</td>
+            <td class="name">name</td>
+            <td class="points"> matches/wins</td>
+          </tr>
+        </table>
+      </div>
+    </main>
+  </body>
 </html>
