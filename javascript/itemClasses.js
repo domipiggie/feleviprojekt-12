@@ -1,10 +1,10 @@
 class Item{
-    displayName; displayDescription; fullBackground; sectionName;
+    displayName; displayDescription; fullBackgrounds; sectionName;
 
-    constructor(displayName, displayDescription, fullBackground, sectionName){
+    constructor(displayName, displayDescription, fullBackgrounds, sectionName){
         this.displayName = displayName
         this.displayDescription = displayDescription
-        this.fullBackground = fullBackground
+        this.fullBackgrounds = fullBackgrounds
         this.sectionName = sectionName
     }
 }
