@@ -12,7 +12,7 @@ function makeItem(item){
 
 function drawSection(item){
     let currentSection = document.createElement("div")
-    currentSection.classList = "row"
+    currentSection.classList = "row section m-3 p-3"
     let sectionName = document.createElement("h2")
     sectionName.innerText = item.sectionName
 
@@ -52,6 +52,8 @@ window.addEventListener("load", function(){
         }
 
         respJson = JSON.parse(xhr.response)
+
+        document.body.style.backgroundImage = "url("+respJson.customBackground+")"
 
         respJson.shop.forEach(function(item, index){
             for (i in sections){
