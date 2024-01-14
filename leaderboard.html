@@ -19,7 +19,7 @@ body {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  background-color: #252525;
+  background-color: #343a40;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,8 +29,7 @@ main {
   width: 40rem;
   height: 43rem;
   background-color: #c4c4c4;
-  -webkit-box-shadow: 0px 5px 15px 8px #e4e7fb;
-  box-shadow: 0px 5px 15px 8px #e4e7fb;
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +61,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  color: #0c090a;
+  color: #000000;
   cursor: default;
 }
 
@@ -74,8 +73,7 @@ tr {
 tr:not(:first-child):hover {
   background-color: #ffffff;
   transform: scale(1.1);
-  -webkit-box-shadow: 0px 5px 15px 8px #e4e7fb;
-  box-shadow: 0px 5px 15px 8px #5d5f69;
+  
 }
 
 tr:nth-child(odd) {
@@ -83,7 +81,7 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(1) {
-  color: #000000;
+  color: #ffffff;
 }
 
 td {
@@ -215,6 +213,11 @@ td {
           </tr>
           <tr>
             <td class="number">5</td>
+            <td class="name">name</td>
+            <td class="points"> matches/wins</td>
+          </tr>
+          <tr>
+            <td class="number">6</td>
             <td class="name">name</td>
             <td class="points"> matches/wins</td>
           </tr>
