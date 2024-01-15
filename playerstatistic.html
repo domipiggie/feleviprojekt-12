@@ -17,7 +17,7 @@
         crossorigin="anonymous"></script>
     <title>Statistics</title>
     <style>
-        body {
+        .cardcontainer {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
@@ -64,17 +64,59 @@
 </head>
 
 <body>
-    <div class="player-card">
-        <img src="kepek/unknown.jpg" alt="Játékos Kép">
-        <h2><b id="name">Statistics</b></h2>
-        <p><strong>Win:</strong> <span id="win"></span></p>
-        <p><strong>Kill:</strong> <span id="kill"></span></p>
-        <p><strong>Match:</strong> <span id="match"></span></p>
-        <p><strong>Winrate:</strong> <span id="winrate"></span></p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <div class="input-group">
+                <div class="form-outline" data-mdb-input-init>
+                    <input id="search-input" type="search" id="form1" class="form-control w-75"
+                        placeholder="Keresés..." />
+                    <!-- w-vel tudsz szelesiteni -->
+                </div>
+                <button id="search-button" type="button" class="btn btn-dark">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-bold" href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-bold" href="leaderboard.html">
+                            Leaderboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-bold" href="itemshop.html">
+                            Itemshop
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cardcontainer">
+        <div class="player-card">
+            <img src="kepek/unknown.jpg" alt="Játékos Kép">
+            <h2><b id="name">Statistics</b></h2>
+            <p><strong>Win:</strong> <span id="win"></span></p>
+            <p><strong>Kill:</strong> <span id="kill"></span></p>
+            <p><strong>Match:</strong> <span id="match"></span></p>
+            <p><strong>Winrate:</strong> <span id="winrate"></span></p>
+        </div>
     </div>
 
     <script src="javascript/playerClasses.js"></script>
     <script src="javascript/playerStatistics.js"></script>
+    <script src="javascript/search.js"></script>
 </body>
 
 </html>
