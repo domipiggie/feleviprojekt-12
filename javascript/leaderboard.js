@@ -1,4 +1,4 @@
-const apiLink = "http://api.griddy.hu"
+const apiLink = "https://api.griddy.hu"
 const xhr = new XMLHttpRequest()
 const leadertable = document.getElementById("leadertable")
 
